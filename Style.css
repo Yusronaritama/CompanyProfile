@@ -1,0 +1,471 @@
+/* Mengatur ulang margin dan padding default browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* --- Gaya untuk Navigation Bar --- */
+.navbar {
+    background-color: #2c3e50; /* Warna biru tua keabuan */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky; /* Membuat navbar tetap di atas saat scroll */
+    top: 0;
+    z-index: 999; /* Memastikan navbar selalu di paling depan */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-item {
+    height: 60px;
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-out;
+}
+
+.nav-links:hover {
+    background-color: #34495e; /* Warna sedikit lebih terang saat disentuh mouse */
+    color: #ecf0f1;
+}
+
+
+/* --- Gaya untuk Header Carousel --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Anda bisa sesuaikan tinggi carousel */
+    overflow: hidden;
+    background-color: #333; /* Warna latar jika gambar lambat dimuat */
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Semua slide disembunyikan secara default */
+    transition: opacity 1.5s ease-in-out; /* Efek transisi fade halus */
+}
+
+/* Kelas 'active' ini akan ditambahkan oleh JavaScript untuk menampilkan slide */
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar menutupi area tanpa gepeng */
+    filter: brightness(0.6); /* Membuat gambar sedikit lebih gelap agar teks terbaca */
+}
+
+/* Posisi teks di atas gambar, tidak perlu diubah */
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+}
+
+/* --- Gaya untuk Bagian About Us --- */
+.about-us {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.about-us-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Jarak antara gambar dan teks */
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.about-us-image {
+    flex: 1; /* Mengisi ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum sebelum wrap */
+}
+
+.about-us-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-us-content {
+    flex: 1; /* Mengisi ruang yang tersedia */
+    min-width: 300px;
+}
+
+.about-us-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Garis bawah dekoratif untuk judul */
+.about-us-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #1abc9c; /* Warna hijau toska */
+}
+
+.about-us-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-about {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #16a085; /* Warna sedikit lebih gelap saat disentuh */
+    transform: translateY(-3px); /* Efek sedikit terangkat */
+}
+
+
+/* --- Gaya untuk Konten di Bawah Gambar --- */
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.site-footer {
+    background-color: #2c3e50; /* Warna biru tua keabuan, sama seperti navbar */
+    color: #bdc3c7; /* Warna teks abu-abu terang */
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.site-footer h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-about, .footer-contact, .footer-social {
+    width: 100%; /* Default untuk mobile */
+    margin-bottom: 30px;
+}
+
+/* Atur lebar kolom untuk layar lebih besar */
+@media (min-width: 768px) {
+    .footer-about, .footer-contact, .footer-social {
+        width: 30%;
+    }
+}
+
+.footer-about p {
+    line-height: 1.7;
+}
+
+/* Gaya untuk daftar kontak */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-list .icon {
+    margin-right: 15px;
+    flex-shrink: 0; /* Mencegah ikon menyusut */
+}
+
+.contact-list .icon svg {
+    fill: #1abc9c; /* Warna ikon (hijau toska) */
+}
+
+/* Gaya untuk ikon media sosial */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Jarak antar ikon */
+}
+
+.social-link {
+    color: #fff;
+    background-color: #34495e;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Membuat ikon menjadi bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #1abc9c; /* Warna berubah saat disentuh mouse */
+}
+
+/* Garis bawah dan copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #34495e;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* --- Gaya untuk Bagian About Us & Sejarah --- */
+.about-us {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.about-us-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex; /* <-- Kunci utama: membuat item di dalamnya berjajar */
+    align-items: flex-start;
+    gap: 40px; /* Jarak antara dua kolom */
+    flex-wrap: wrap; /* Izinkan item bertumpuk di layar kecil */
+}
+
+.about-us-history, .about-us-content {
+    flex: 1; /* Membuat kedua kolom berbagi ruang secara merata */
+    min-width: 300px; /* Lebar minimum sebelum bertumpuk */
+}
+
+/* --- Gaya untuk Pengalaman Kami --- */
+.experience-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.experience-section .container {
+    text-align: center;
+}
+
+.btn-toggle-table {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-toggle-table:hover {
+    background-color: #16a085;
+}
+
+.arrow-down {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.4s ease;
+}
+
+/* Rotasi panah saat tombol aktif */
+.btn-toggle-table.active .arrow-down {
+    transform: rotate(-135deg);
+}
+
+.table-container {
+    max-height: 0; /* Sembunyikan kontainer secara default */
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    margin-top: 30px;
+}
+
+/* Kelas 'show' untuk menampilkan kontainer */
+.table-container.show {
+    max-height: 1000px; /* Atur ketinggian maksimum yang cukup untuk tabel */
+}
+
+.collaboration-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.collaboration-table th, .collaboration-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.collaboration-table thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.collaboration-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.collaboration-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- Gaya untuk Paginasi Tabel --- */
+.pagination-container {
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.pagination-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#page-info {
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* ... (gaya .experience-section yang sudah ada) ... */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    background-color: #fff;
+    color: #34495e;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #ecf0f1;
+}
+
+.filter-btn.active {
+    background-color: #2c3e50;
+    color: #fff;
+    border-color: #2c3e50;
+}
