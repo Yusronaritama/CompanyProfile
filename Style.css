@@ -469,3 +469,147 @@ h2 {
     color: #fff;
     border-color: #2c3e50;
 }
+
+/* --- Gaya untuk Bagian Jasa Kami --- */
+.services-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Memastikan paragraf mengisi ruang */
+}
+
+.btn-service {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-service:hover {
+    background-color: #16a085;
+}
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Membuatnya bulat */
+    background-color: #e8f8f5; /* Warna hijau toska sangat muda */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto; /* Posisi di tengah dan beri jarak bawah */
+}
+
+.service-icon svg {
+    fill: #1abc9c; /* Warna ikon hijau toska */
+}
+
+/* --- Gaya untuk Bagian Portfolio --- */
+.portfolio-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.portfolio-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative; /* Diperlukan untuk overlay */
+    overflow: hidden; /* Menyembunyikan bagian overlay yang keluar */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.85); /* Warna overlay gelap transparan */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Sembunyikan secara default */
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.5rem;
+    transform: translateY(20px); /* Efek tulisan muncul dari bawah */
+    transition: transform 0.4s ease;
+}
+
+/* Efek saat kursor mouse di atas item */
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-overlay h3 {
+    transform: translateY(0);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Efek zoom pada gambar */
+}
