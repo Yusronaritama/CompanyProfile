@@ -24,20 +24,8 @@ let currentSlide = 0;
         if (downloadsGrid && downloadGroup) {
             downloadsGrid.classList.add('has-group');
         }
-        // Logika untuk Tombol Dropdown Tabel
-const toggleButton = document.querySelector('.btn-toggle-table');
+        
 
-if (toggleButton) {
-    toggleButton.addEventListener('click', function() {
-        const targetId = this.dataset.target;
-        const tableContainer = document.querySelector(targetId);
-
-        if (tableContainer) {
-            this.classList.toggle('active');
-            tableContainer.classList.toggle('show');
-        }
-    });
-}
 
 // --- Logika untuk Paginasi Tabel ---
 const table = document.querySelector('.collaboration-table');
@@ -93,38 +81,8 @@ if (table) {
 }
 
 
-// --- Logika untuk Filter Tabel dengan tbody ---
-const experienceSection = document.querySelector('.experience-section');
-if (experienceSection) {
-    const filterButtons = experienceSection.querySelectorAll('.filter-btn');
-    const allTbody = experienceSection.querySelectorAll('.collaboration-table tbody');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Update tampilan tombol aktif
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
 
-            const range = button.dataset.range;
-
-            // Sembunyikan semua tbody terlebih dahulu
-            allTbody.forEach(tbody => tbody.style.display = 'none');
-
-            if (range === 'all') {
-                // Tampilkan semua jika tombol "Semua" diklik
-                allTbody.forEach(tbody => tbody.style.display = ''); // '' mengembalikan ke default
-            } else {
-                // Tampilkan hanya tbody yang sesuai
-                const targetTbody = document.getElementById(`data-${range}`);
-                if (targetTbody) {
-                    targetTbody.style.display = '';
-                }
-            }
-        });
-    });
-
-    // Inisialisasi: Tampilkan semua data saat pertama kali dimuat
-    allTbody.forEach(tbody => tbody.style.display = '');
-}
+    
 
 

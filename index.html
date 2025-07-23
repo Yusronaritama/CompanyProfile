@@ -130,40 +130,20 @@
 
         <div class="table-container" id="collaboration-table">
             <table class="collaboration-table">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Nama Perusahaan / Instansi</th>
-                        <th>Jenis Kolaborasi</th>
-                        <th>Tahun</th>
-                    </tr>
-                </thead>
-
-                <tbody id="data-2020-2029">
-                    <tr><td>1</td><td>PT Jaya Abadi</td><td>Pengadaan Barang</td><td>2024</td></tr>
-                    <tr><td>2</td><td>Universitas Teknologi Purwakarta</td><td>Program Magang</td><td>2023</td></tr>
-                    <tr><td>3</td><td>Instansi Pemerintah Daerah</td><td>Pelatihan SDM</td><td>2023</td></tr>
-                    <tr><td>4</td><td>PT Karya Bersama</td><td>Joint Venture</td><td>2024</td></tr>
-                </tbody>
-
-                <tbody id="data-2010-2019">
-                    <tr><td>5</td><td>CV Mitra Sejahtera</td><td>Penyediaan Jasa</td><td>2019</td></tr>
-                    <tr><td>6</td><td>PT Sinar Harapan</td><td>Pengembangan Sistem</td><td>2018</td></tr>
-                    <tr><td>7</td><td>Komunitas IT Purwakarta</td><td>Sponsor Acara</td><td>2017</td></tr>
-                    <tr><td>8</td><td>PT Logistik Cepat</td><td>Distribusi Produk</td><td>2015</td></tr>
-                </tbody>
-
-                <tbody id="data-2000-2009">
-                    <tr><td>9</td><td>SMK Negeri 1 Purwakarta</td><td>Kunjungan Industri</td><td>2009</td></tr>
-                    <tr><td>10</td><td>Lembaga Riset Nasional</td><td>Penelitian Produk</td><td>2008</td></tr>
-                    <tr><td>11</td><td>Koperasi Simpan Pinjam</td><td>Layanan Keuangan</td><td>2005</td></tr>
-                    <tr><td>12</td><td>PT Media Kreatif</td><td>Kampanye Pemasaran</td><td>2002</td></tr>
-                </tbody>
-            </table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nama Perusahaan / Instansi</th>
+            <th>Jenis Kolaborasi</th>
+            <th>Tahun</th>
+        </tr>
+    </thead>
+    <tbody id="collaboration-data-container"></tbody>
+</table>
             <div class="pagination-container">
-                <button class="pagination-button" id="prev-button" disabled>Sebelumnya</button>
-                <span id="page-info">Halaman 1 dari 3</span>
-                <button class="pagination-button" id="next-button"></button>
+                <button class="pagination-button" id="prev-button">Sebelumnya</button>
+                <span id="page-info"></span>
+                <button class="pagination-button" id="next-button">Berikutnya</button>
             </div>
         </div>
     </div>
@@ -335,6 +315,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="collaboration.js"></script>
 
 
 </body>
