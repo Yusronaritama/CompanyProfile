@@ -3,20 +3,18 @@ let currentSlide = 0;
         const slideInterval = 5000; // Ganti gambar setiap 5 detik (5000 milidetik)
 
         function showNextSlide() {
-            // Sembunyikan slide yang sedang aktif
+            
             slides[currentSlide].classList.remove('active');
             
-            // Pindah ke slide berikutnya, kembali ke awal jika sudah di akhir
             currentSlide = (currentSlide + 1) % slides.length;
             
-            // Tampilkan slide baru
             slides[currentSlide].classList.add('active');
         }
 
-        // Tampilkan slide pertama saat halaman dimuat
+        
         slides[0].classList.add('active');
 
-        // Mulai interval untuk menggeser slide secara otomatis
+        
         setInterval(showNextSlide, slideInterval);
 
         const downloadsGrid = document.querySelector('.downloads-grid');
@@ -32,19 +30,18 @@ const table = document.querySelector('.collaboration-table');
 if (table) {
     const tbody = table.querySelector('tbody');
     const rows = Array.from(tbody.querySelectorAll('tr'));
-    const rowsPerPage = 5; // Atur jumlah baris per halaman di sini
+    const rowsPerPage = 10; // jumlah baris per halaman
     let currentPage = 1;
     const totalPages = Math.ceil(rows.length / rowsPerPage);
-
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
     const pageInfo = document.getElementById('page-info');
 
     function displayPage(page) {
-        // Sembunyikan semua baris
+        
         rows.forEach(row => row.style.display = 'none');
 
-        // Tampilkan baris untuk halaman saat ini
+        
         const startIndex = (page - 1) * rowsPerPage;
         const endIndex = startIndex + rowsPerPage;
         const pageRows = rows.slice(startIndex, endIndex);
